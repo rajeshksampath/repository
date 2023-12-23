@@ -6,7 +6,7 @@ public class PrintPrimeNumber {
 		// TODO Auto-generated method stub
 		boolean isPrime;
 		
-		for ( int i=11; i<=100; i++)
+		for ( int i=3; i<=100; i++)
 		{
 			isPrime = checkPrime(i);
 			

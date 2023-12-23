@@ -20,16 +20,17 @@ public class reverseString {
 	public static boolean isPalindrome(String str) {
 
 		String t = "";
-		boolean ans = false;
+		//boolean ans = false;
 		for (int i = str.length() - 1; i >= 0; i--) {
 			t = t + str.charAt(i);
 			
 		}
 		//System.out.println(t);
 		if (t.equals(str)) {
-			ans= true;
+			//ans= true;
+			return true;
 		}
-		return ans;
+		return false;
 	}
 
 }
