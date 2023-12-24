@@ -3,3 +3,23 @@
 !MESSAGE Save operation warnings.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2023-12-23 19:21:20.288
 !MESSAGE The project description file (.project) for '.org.eclipse.jdt.core.external.folders' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.egit.core 4 0 2023-12-24 12:23:05.336
+!MESSAGE An exception occurred during push on URI https://github.com/rajeshksampath/repository.git: https://github.com/rajeshksampath/repository.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/rajeshksampath/repository.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:180)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/rajeshksampath/repository.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:571)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:467)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1367)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:170)
+	... 4 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-12-24 12:23:05.369
+!MESSAGE Can't connect to any repository: https://github.com/rajeshksampath/repository.git (https://github.com/rajeshksampath/repository.git: not authorized)
